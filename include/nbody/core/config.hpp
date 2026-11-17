@@ -12,8 +12,7 @@
 
 namespace nbody {
 
-// Run configuration shared by all executables. New options are added in later
-// phases; existing names and defaults must not change.
+// Run configuration shared by all executables.
 struct RunConfig {
   std::uint64_t n = 1000;
   std::uint64_t seed = 42;

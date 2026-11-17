@@ -55,7 +55,7 @@ FlatTree let_to_tree(const Node* nodes, std::size_t n_nodes, const double* parts
 class LetExchanger {
  public:
   // skip (optional, size P): ranks that get no LET from us and send none to us (their trees
-  // are reachable through shared memory, Phase 7). Must be symmetric across ranks.
+  // are reachable through shared memory). Must be symmetric across ranks.
   void start(MPI_Comm comm, const FlatTree& local, const ParticleSet& p, int threads, CommMode mode,
              const std::vector<char>* skip = nullptr);
   void progress();

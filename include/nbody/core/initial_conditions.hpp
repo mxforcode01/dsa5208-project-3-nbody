@@ -31,7 +31,7 @@ void generate_particles(const ICParams& params, std::uint64_t id_begin, std::uin
                         ParticleSet& p);
 
 // Subtracts the mass-weighted mean velocity (serial version; the MPI version
-// in Phase 3 performs the same operation with a global reduction).
+// performs the same operation with a global reduction).
 void remove_com_velocity(ParticleSet& p);
 
 }  // namespace nbody

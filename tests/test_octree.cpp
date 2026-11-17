@@ -1,6 +1,6 @@
 // Octree structure: depth-first layout, skip pointers, particle ranges, moments,
 // leaf capacity / max depth, coincident particles; and the opening criterion,
-// including the conservative box version needed for the LET in Phase 3.
+// including the conservative box version needed for the LET.
 #include <algorithm>
 #include <cmath>
 #include <cstdint>

@@ -20,7 +20,7 @@ struct WalkResult {
 };
 
 // Non-owning view of a flat tree: a FlatTree, or a tree published by another rank in an
-// MPI shared-memory window (Phase 7). Same layout either way.
+// MPI shared-memory window. Same layout either way.
 struct TreeView {
   const Node* nodes = nullptr;
   std::int32_t n_nodes = 0;

@@ -131,8 +131,8 @@ python scripts/hpc/plot_results.py results/hpc/<run> [more run folders ...] --ou
 
 The results used in the report, with their tables and figures, are already in `results/final/`.
 Their CSV column `git_hash` (`ac8e98a`) names the team's internal development commit that built the
-programs; the C++ sources in this repository are identical to it (later changes were to scripts and
-documentation only).
+programs; the C++ sources in this repository are the same code (later changes were to scripts,
+documentation and source comments only).
 
 ## 8. More detail
 

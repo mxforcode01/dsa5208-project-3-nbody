@@ -22,14 +22,14 @@ struct ForceStats {
   std::size_t tree_nodes = 0;           // nodes in the most recent (local) tree
   int tree_depth = 0;                   // deepest level seen in any tree
 
-  // OpenMP balance of the force loops, summed over all loops of the run (Phase 5):
+  // OpenMP balance of the force loops, summed over all loops of the run:
   // thread imbalance = loop_busy_max / loop_busy_mean, work imbalance = loop_work_max / loop_work_mean.
   double loop_busy_max = 0.0, loop_busy_mean = 0.0;
   double loop_work_max = 0.0, loop_work_mean = 0.0;
   double thread_imbalance() const { return loop_busy_mean > 0.0 ? loop_busy_max / loop_busy_mean : 1.0; }
   double thread_work_imbalance() const { return loop_work_mean > 0.0 ? loop_work_max / loop_work_mean : 1.0; }
 
-  // Distributed solver only (Phase 3+).
+  // Distributed solver only.
   double decomposition_time = 0.0;
   double migration_time = 0.0;
   double let_build_time = 0.0;
@@ -39,7 +39,7 @@ struct ForceStats {
   double force_remote_time = 0.0;
   std::uint64_t let_bytes_sent = 0;
   std::uint64_t let_bytes_received = 0;  // remote-tree copies this rank had to hold
-  // GPU offload (Phase 8): what executed the walks, and where the time went.
+  // GPU offload: what executed the walks, and where the time went.
   int executed = 0;              // nbody::Executed of the last evaluation: 0 cpu, 1 gpu, 2 host-fallback
   int num_devices = 0;           // omp_get_num_devices() seen by the last evaluation
   int device_id = -1;            // GPU used by this rank (-1 = none)
@@ -47,7 +47,7 @@ struct ForceStats {
   double gpu_kernel_time = 0.0;
   double gpu_d2h_time = 0.0;
   double gpu_h2d_bytes = 0.0;
-  // Shared-memory windows (Phase 7).
+  // Shared-memory windows.
   double shm_publish_time = 0.0;         // copy into the window + synchronisation
   double shm_sync_time = 0.0;            // Allreduce + Win_sync + Barrier part of it
   std::uint64_t shm_segment_bytes = 0;   // current capacity of this rank's segment

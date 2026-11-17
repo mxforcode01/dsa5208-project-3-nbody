@@ -13,7 +13,7 @@ struct Cube {
   double cx = 0.0, cy = 0.0, cz = 0.0, half = 1.0;
 };
 
-// Axis-aligned box (closed), used as a LET target region from Phase 3.
+// Axis-aligned box (closed), used as a LET target region.
 struct AABB {
   double lo[3] = {0.0, 0.0, 0.0};
   double hi[3] = {0.0, 0.0, 0.0};
@@ -45,7 +45,7 @@ struct TreeParams {
 
 namespace node_flags {
 constexpr std::uint8_t kLeaf = 1;
-constexpr std::uint8_t kPruned = 2;  // remote LET node whose subtree was not sent (Phase 3)
+constexpr std::uint8_t kPruned = 2;  // remote LET node whose subtree was not sent
 }  // namespace node_flags
 
 // One octree cell in a flat depth-first (pre-order) array. The first child of an

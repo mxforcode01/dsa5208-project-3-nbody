@@ -18,7 +18,7 @@ struct SimParams {
   std::function<void(Diagnostics&)> reduce_diagnostics;
 };
 
-// Accumulated over the whole run (seconds). New phases add fields here.
+// Accumulated over the whole run (seconds).
 struct StepTimings {
   double force = 0.0;
   double integrate = 0.0;
