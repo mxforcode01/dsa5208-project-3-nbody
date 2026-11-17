@@ -28,4 +28,4 @@ fi
 tar --exclude "$NAME/tmp_*" -czf "$RUN_DIR.tar.gz" -C "$(dirname "$RUN_DIR")" "$NAME"
 echo "bundle: $RUN_DIR.tar.gz ($(du -h "$RUN_DIR.tar.gz" | cut -f1))"
 echo "copy it to your computer with, for example:"
-echo "  scp <nusnet-id>@atlas8.nus.edu.sg:$RUN_DIR.tar.gz ."
+echo "  scp <nusnet-id>@vanda.nus.edu.sg:$RUN_DIR.tar.gz ."

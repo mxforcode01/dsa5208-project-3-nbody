@@ -1,7 +1,7 @@
 #!/bin/bash
 # One command for everything: build, test, and run the experiments.
 #
-#   ./scripts/hpc/run_all.sh              on a PBS cluster login node (e.g. Atlas): build here,
+#   ./scripts/hpc/run_all.sh              on a PBS cluster login node (e.g. Vanda): build here,
 #                                         submit the test job, then the experiment jobs, which
 #                                         start only if the tests pass
 #   ./scripts/hpc/run_all.sh --dry-run    build and print the qsub commands without submitting

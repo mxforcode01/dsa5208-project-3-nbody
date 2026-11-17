@@ -42,7 +42,7 @@ nb_newest_module() {
 
 # Load compilers/MPI/CMake. Sets NB_LOADED_MODULES (what was loaded, for the jobs).
 nb_load_modules() {
-  # Atlas (NUS) needs its EasyBuild environment before `module avail` shows anything.
+  # Some NUS clusters need their EasyBuild environment before `module avail` shows anything.
   if [ -f /app1/ebenv ]; then
     # shellcheck disable=SC1091
     . /app1/ebenv >/dev/null 2>&1 || true
